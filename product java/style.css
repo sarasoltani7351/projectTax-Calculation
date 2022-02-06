@@ -1,0 +1,59 @@
+*{margin:0}
+body{
+    background-color: #efeced   !important ;
+    font-family: 'Baloo Bhaijaan 2', cursive !important;
+}
+.font-lemonada{
+    font-family: 'Lemonada', cursive;
+}
+.titlewebsite{
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 2.2rem;
+}
+.main{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.nav-tabs .btn-outline-danger {
+    margin: 10px;
+    background: 0 0;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.forms{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    border: 8px double #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.answer{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    border: 8px double #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+input{padding: 3px 5px;}
+.button{font-size: 1.5rem !important;}
+.bordernone{border: 0;}
+.m-10{margin: 10px;}
+.m-15{margin: 15px;}
+.m-35{margin: 35px;}
+.pt-15{padding-top: 15px;}
+.pl-10{padding-left: 10px;}
+.p-20{padding: 20px;}
+.text-right{ text-align: right;}
+/* .content{background: url(images/vat.png) left bottom no-repeat; } */
