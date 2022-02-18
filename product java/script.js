@@ -1,48 +1,48 @@
-//Crete function for area,envairoment,levy like this:
-// function getArea(radius) {
-//     return 3.14 * radius * radius;
-// }
-
-// function getEnvairoment(radius) {
-//     return 2 * 3.14 * radius;
-// }
-
-// function getTax(fee) {
-//     const tax = 0.09;
-//     return fee * tax;
-// }
-
-function area() {
-    //what is this comment?
-        // Get the value of the input field with id="numb"
-    let r = document.getElementById("Radius").value; // use clear naming like: area & use const instead let for constant value
-    let p = 3.14;// use clear naming & use const instead let for constant value
-    //what is this comment?
-        // If x is Not a Number or less than one or greater than 10
-    let A;//use clear naming like : area
-    A = (p * r * r); // use getArea function : const area = getArea(radius);
-    document.getElementById("demo1").innerHTML = "مساحت  = " + A;
+// javaScript Area calculation
+function getArea(radius){
+    const p = 3.14;
+    const area = p * radius * radius;
+    return area;
 }
-//use camelCase naming , please read this page : https://www.w3schools.com/js/js_conventions.asp
-function Environment() {
-    //what is this comment?
-        // Get the value of the input field with id="numb"
-    let r = document.getElementById("Radius").value;// use clear naming like: area & use const instead let for constant value
-    let p = 3.14;// use clear naming & use const instead let for constant value
-    //what is this comment?
-        // If x is Not a Number or less than one or greater than 10
-    let E;//use clear naming like : area
-    E = 2 * p * r;// use getEnvairoment function : const envairoment = getEnvairoment(radius);
-    document.getElementById("demo").innerHTML = "محیط  = " + E;
+function area() {
+    const radius = document.getElementById("radius").value; 
+    if (radius >=1 && radius<10){   
+        document.getElementById("area").style = "color:#333;"
+        document.getElementById("area").innerHTML = "مساحت  = " + getArea(radius);
+    }
+    else {
+        document.getElementById("area").style = "color:red;"
+        document.getElementById("area").innerHTML = "لطفا شعاع دایره را به درستی وارد نمایید";
+    } 
+}
+// javaScript Calculate the environment
+function getEnvironment(radius){
+    const p = 3.14;
+    const environment = 2 * p * radius;
+    return environment;
+}
+function environment() {
+    const radius = document.getElementById("radius").value;
+    if (radius >=1 && radius<10){
+        ocument.getElementById("area").style = "color:#333;"
+        document.getElementById("environment").innerHTML = "محیط  = " +  getEnvironment(radius);
+    }
+    else {
+        document.getElementById("environment").style = "color:red;"
+        document.getElementById("environment").innerHTML = "لطفا شعاع دایره را به درستی وارد نمایید";
+    } 
+}
+// javaScript Tax Calculation
+function getTax(fee) {
+    const tax = 0.09;
+    const maliat = fee * tax;
+    return maliat;
 }
 function levy() {
-    var Am = document.getElementById("Amount").value;// use clear naming like : fee
-    const L = 0.09;// use clear naming 
-    var M;// use clear naming & use getTax function like : const tax = getTax(fee);
-    M = Am * L;
-    // you can use declare and define in same line of code for example : const total = Number(fee) + tax;
-    var total;
-    total = Number(Am) + M;
-    document.getElementById("demo4").innerHTML = " مبلغ با مالیات = " + total + " تومان";
-    document.getElementById("demo3").innerHTML = " مالیات بر اساس مبلغ وارد شده = " + M + " تومان";
+    var fee = document.getElementById("fee").value;
+    const tax = getTax(fee);
+    const total = Number(fee)+tax;
+    document.getElementById("totalPrice").innerHTML = " مبلغ با مالیات = " + total + " تومان";
+    document.getElementById("tax").innerHTML = " مالیات بر اساس مبلغ وارد شده = " + tax + " تومان";
 }
+
