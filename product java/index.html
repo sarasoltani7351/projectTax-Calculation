@@ -77,7 +77,20 @@
                     مساحت دایره
                 </button>
             </li>
-            
+            <li class="nav-item" role="presentation">
+                <button 
+                    class="btn btn-outline-danger" 
+                    id="MBI-tab" 
+                    data-bs-toggle="tab" 
+                    data-bs-target="#BMI" 
+                    type="button" 
+                    role="tab" 
+                    aria-controls="BMI" 
+                    aria-selected="false"
+                    >
+                    محاسبه BMI
+                </button>
+            </li>
         </ul>
         <div class="tab-content pt-15" id="myTabContent">
             <div class="tab-pane fade text-center show active" id="home" role="tabpanel" aria-labelledby="home-tab" >
@@ -112,6 +125,25 @@
                     <h3 class="text-right">پاسخ:</h3>
                     <h3 class="m-10" id= "area"></h3>
                     <h3 id= "environment"></h3>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="BMI" role="tabpanel" aria-labelledby="BMI-tab">
+                <div class="forms">
+                    <p> جهت محاسبه شاخص توده بدنی MBI وزن و قد خود را وارد نمایید. </p>
+                    <div class="m-15">
+                        <label>قد (سانتی‌متر) </label>
+                        <input id="height" type="text" placeholder="قد خود را وارد نمایید">
+                    </div>
+                    <div class="m-15">
+                        <label>وزن (کیلوگرم) </label>
+                        <input id="weight" type="text" placeholder="وزن خود را وارد نمایید">
+                    </div>
+                    <button id="BMI" onclick=" BMI()" type="button" class=" button btn btn-warning"> محاسبه BMI </button>
+                </div>
+                <div class="answer">
+                    <h3 class="text-right">پاسخ:</h3>
+                    <h3 class="m-10" id= "resultMBI"></h3>
+                    <h3 id= "explanationBMI"></h3>
                 </div>
             </div>
         </div>

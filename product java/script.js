@@ -45,4 +45,18 @@ function levy() {
     document.getElementById("totalPrice").innerHTML = " مبلغ با مالیات = " + total + " تومان";
     document.getElementById("tax").innerHTML = " مالیات بر اساس مبلغ وارد شده = " + tax + " تومان";
 }
-
+// javaScript MBI calculation
+function calcBMI(weight,height){
+    var result = ((weight)/ (Math.pow(height,2) / 10000)).toFixed(2);
+    return result;
+} 
+function BMI(){
+    var weight = Number(document.getElementById("weight").value);
+    var height = Number(document.getElementById("height").value);
+    var bmi = calcBMI(weight,height);
+    document.getElementById("resultMBI").innerHTML = "شاخص توده بدنی = " + bmi;
+    if (bmi < 18.5) explanationBMI.innerHTML = " دارای کاهش وزن هستید" ;
+    else if (bmi >= 18.5 && bmi < 24.9) explanationBMI.innerHTML = "دارای وزن سالم و ایده آل هستید";
+    else if (bmi >= 25 && bmi<29.9) explanationBMI.innerHTML= "دچار اضافه وزن هستید";
+    if( bmi>= 30) explanationBMI.innerHTML = "دچار چاقی هستید"
+}
